@@ -9,7 +9,8 @@ app.controller('MainCtrl', function($scope) {
     $scope.points = {
         "stange_x": 50,
         "stange_y": 125,
-        "winkel": 45
+        "winkel": 45,
+        "winkelsonne": 45
     };
     $scope.points2 = {
         "aussen_x": 50,

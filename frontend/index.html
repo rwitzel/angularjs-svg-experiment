@@ -30,13 +30,29 @@
         <input class="form-control" type="range" min="0" max="125" ng-model="points.stange_y" step="25" class="slider" id="slider_stange_y">
       </div>
       <div class="form-group">
-        <label for="slider_winkel">winkel {{points.winkel}}</label>
+        <label for="slider_winkel">gelenk winkel {{points.winkel}}</label>
         <input class="form-control" type="range" min="-90" max="90" ng-model="points.winkel" class="slider" id="slider_winkel">
+      </div>
+      <div class="form-group">
+        <label for="slider_winkelsonne">sonneneinfall winkel {{points.winkelsonne}}</label>
+        <input class="form-control" type="range" min="-90" max="90" ng-model="points.winkelsonne" class="slider" id="slider_winkelsonne">
       </div>
     </form>
 
     <div>
     <svg height="310" width="400">
+
+    <defs>
+        <pattern id="svg-stripes-pattern-914" patternTransform="rotate({{-points.winkelsonne}})" width="100%" height="10" x="0" y="0" patternUnits="userSpaceOnUse">
+            <g>
+                <rect x="0" y="0" width="100%" height="30" fill="yellow"></rect>
+                <rect x="0" y="5" width="100%" height="60" fill="rgba(234, 234, 234, 1)"></rect>
+            </g>
+        </pattern>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="url(#svg-stripes-pattern-914)"></rect>
+
+
       <line id="decke" x1="0" y1="0" x2="66" y2="0"  style="{{black}}"/>
       <line id="hinterwand" x1="0" y1="0" x2="0" y2="300"  style="{{black}}"/>
       <line id="boden" x1="0" y1="300" x2="105" y2="300"  style="{{black}}"/>
