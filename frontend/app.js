@@ -10,6 +10,7 @@ app.controller('MainCtrl', function($scope) {
       value.node.x += Math.round((Math.random()-0.5)*20);
     });
   }
+  $scope.black = "stroke:rgb(0, 0,0);stroke-width:2";
 });
 
 app.directive('', function(){
