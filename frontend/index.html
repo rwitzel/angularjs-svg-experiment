@@ -35,33 +35,38 @@
       </div>
     </form>
 
-    <ul>
-      <li>aussen_x {{points2.aussen_x}}</li>
-      <li>aussen_y {{points2.aussen_y}}</li>
-    </ul>
-
     <div>
-    <svg height="400" width="400">
+    <svg height="310" width="400">
       <line id="decke" x1="0" y1="0" x2="66" y2="0"  style="{{black}}"/>
       <line id="hinterwand" x1="0" y1="0" x2="0" y2="300"  style="{{black}}"/>
       <line id="boden" x1="0" y1="300" x2="105" y2="300"  style="{{black}}"/>
       <!-- 300 - 80 -->
       <line id="bruestung" x1="105" y1="300" x2="105" y2="220"  style="{{black}}"/>
       <!-- 300 - 190 ; 105 - 38 = 67 -->
-      <line id="katzennetz" x1="105" y1="220" x2="67" y2="110"  style="{{black}}"/>
+      <line id="katzennetz" x1="105" y1="220" x2="67" y2="110"  style="{{black}}" stroke-linecap="round" stroke-dasharray="1, 3"/>
 
-      <line id="stange" x1="{{points.stange_x}}" y1="0" x2="{{points.stange_x}}" y2="300"  style="{{black}}"/>
+      <line id="stange" x1="{{points.stange_x}}" y1="0" x2="{{points.stange_x}}" y2="300"  style="{{orange}}"/>
       <line id="stuetze" x1="{{points.stange_x}}" y1="{{points.stange_y}}"
-                         x2="{{points2.aussen_x}}" y2="{{points2.aussen_y}}"  style="{{black}}"/>
+                         x2="{{points2.aussen_x}}" y2="{{points2.aussen_y}}"  style="{{orange}}"/>
       <line id="markise_oben" x1="{{points.stange_x}}" y1="0"
-                         x2="{{points2.aussen_x}}" y2="{{points2.aussen_y}}"  style="{{black}}"/>
+                         x2="{{points2.aussen_x}}" y2="{{points2.aussen_y}}"  style="{{orange}}"/>
       <line id="markise_vorne" x1="{{points2.aussen_x}}" y1="{{points2.aussen_y + 20}}"
-                         x2="{{points2.aussen_x}}" y2="{{points2.aussen_y}}"  style="{{black}}"/>
+                         x2="{{points2.aussen_x}}" y2="{{points2.aussen_y}}"  style="{{orange}}"/>
 
       <line id="person_lang" x1="20" y1="120" x2="20" y2="300"  style="{{blue}}"/>
       <line id="person_kurz" x1="40" y1="150" x2="40" y2="300"  style="{{blue}}"/>
 
+      <line id="alter_schirm" x1="30" y1="80" x2="135" y2="128"  style="{{green}}"/>
+
     </svg>
+
+    <ul>
+      <li>blau links: grosse person steht</li>
+      <li>blau rechts: kleine person steht</li>
+      <li>grün: alter schirm</li>
+      <li>aussen_x {{points2.aussen_x}}</li>
+      <li>aussen_y {{points2.aussen_y}}</li>
+    </ul>
 
   </body>
 
