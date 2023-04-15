@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Balcony Awning Simulation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <script>document.write("<base href=\"" + document.location + "\" />");</script>
     <script data-require="angular.js@*" data-semver="1.3.1" src="//code.angularjs.org/1.3.1/angular.js"></script>
@@ -11,9 +12,19 @@
   </head>
 
   <body ng-controller="MainCtrl">
+    <div class="container">
+
     <p>
       Balcony Awning Simulation
     </p>
+
+
+    <form>
+      <div class="form-group">
+        <label for="slider_stange_x">stange_x {{points.stange_x}}</label>
+        <input class="form-control" type="range" min="0" max="105" ng-model="points.stange_x" class="slider" id="slider_stange_x">
+      </div>
+    </form>
 
     <div>
     <svg height="400" width="400">
@@ -29,18 +40,6 @@
 
     </svg>
 
-    </div>
-
-    <p>
-      ignore below
-    </p>
-    <div ng-click="move()">move</div>
-    <svg>
-      <g ng-repeat="cell in row">
-        <rect width="50" height="50" ng-attr-x="{{cell.node.x}}" ng-attr-y="{{cell.node.x}}"></rect>
-        <text x="10" y="10">{{cell.node.name}}</text>
-      </g>
-    </svg>
   </body>
 
 </html>
