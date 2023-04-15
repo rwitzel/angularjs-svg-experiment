@@ -5,6 +5,7 @@ app.controller('MainCtrl', function($scope) {
     $scope.blue = "stroke:rgb(0, 0,255);stroke-width:10";
     $scope.green = "stroke:green;stroke-width:4";
     $scope.orange = "stroke:orange;stroke-width:4";
+    $scope.red = "stroke:red;stroke-width:20";
     $scope.points = {
         "stange_x": 50,
         "stange_y": 125,
