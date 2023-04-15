@@ -22,7 +22,8 @@
     <form>
       <div class="form-group">
         <label for="slider_stange_x">stange_x {{points.stange_x}}</label>
-        <input class="form-control" type="range" min="0" max="105" ng-model="points.stange_x" class="slider" id="slider_stange_x">
+        <!--<input class="form-control" type="range" min="0" max="105" ng-model="points.stange_x" class="slider" id="slider_stange_x">-->
+        <input class="form-control" type="number"  ng-model="points.stange_x">
       </div>
       <div class="form-group">
         <label for="slider_stange_y">stange_y {{points.stange_y}}</label>
@@ -34,6 +35,11 @@
         <input class="form-control" type="range" min="-90" max="90" ng-model="points.winkel" class="slider" id="slider_winkel">
       </div>
     </form>
+
+    <ul>
+      <li>aussen_x {{points2.aussen_x}}</li>
+      <li>aussen_y {{points2.aussen_y}}</li>
+    </ul>
 
     <div>
     <svg height="400" width="400">

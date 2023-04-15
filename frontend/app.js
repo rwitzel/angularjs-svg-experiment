@@ -24,7 +24,7 @@ app.controller('MainCtrl', function($scope) {
             "aussen_x": $scope.points.stange_x + getCircleX($scope.points.winkel / 180 * Math.PI, $scope.points.stange_y),
             "aussen_y": $scope.points.stange_y - getCircleY($scope.points.winkel / 180 * Math.PI, $scope.points.stange_y)
         };
-        console.log('hey, my Var has changed!');
+        console.log('hey, my Var has changed!', typeof $scope.points.stange_x);
     }
 
     $scope.$watch('points', update_points2, true);
