@@ -19,7 +19,6 @@ app.controller('MainCtrl', function($scope) {
       return Math.cos(radians) * radius;
     }
 
-
     function update_points2() {
         $scope.points2 = {
             "aussen_x": $scope.points.stange_x + getCircleX($scope.points.winkel / 180 * Math.PI, $scope.points.stange_y),
