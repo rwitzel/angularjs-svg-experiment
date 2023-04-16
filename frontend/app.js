@@ -1,7 +1,8 @@
 var app = angular.module('plunker', []);
 
 app.controller('MainCtrl', function($scope) {
-    $scope.black = "stroke:rgb(0, 0,0);stroke-width:2";
+    $scope.black = "stroke:rgb(0, 0,0);stroke-width:4";
+    $scope.black_thin = "stroke:rgb(0, 0,0);stroke-width:2";
     $scope.blue = "stroke:rgb(0, 0,255);stroke-width:10";
     $scope.green = "stroke:green;stroke-width:4";
     $scope.orange = "stroke:orange;stroke-width:4";
