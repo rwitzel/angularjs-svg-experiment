@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <script>document.write("<base href=\"" + document.location + "\" />");</script>
     <script data-require="angular.js@*" data-semver="1.3.1" src="//code.angularjs.org/1.3.1/angular.js"></script>
-    <script src="app.js"></script>
+    <script src="app2.js"></script>
   </head>
 
   <body ng-controller="MainCtrl">
@@ -37,63 +37,6 @@
         <input class="form-control" type="range" min="-90" max="90" ng-model="points.winkelsonne" class="slider" id="slider_winkelsonne">
       </div>
     </form>
-
-    <div>
-    <svg height="310" width="230">
-
-    <defs>
-        <pattern id="svg-stripes-pattern-914" patternTransform="rotate({{-points.winkelsonne}})" width="100%" height="10" x="0" y="0" patternUnits="userSpaceOnUse">
-            <g>
-                <rect x="0" y="0" width="100%" height="30" fill="yellow"></rect>
-                <rect x="0" y="5" width="100%" height="60" fill="rgba(234, 234, 234, 1)"></rect>
-            </g>
-        </pattern>
-    </defs>
-    <rect x="0" y="0" width="100%" height="100%" fill="url(#svg-stripes-pattern-914)"></rect>
-
-
-      <line id="decke" x1="0" y1="0" x2="66" y2="0"  style="{{black}}"/>
-      <line id="hinterwand" x1="0" y1="0" x2="0" y2="300"  style="{{black}}"/>
-      <line id="boden" x1="0" y1="300" x2="105" y2="300"  style="{{black}}"/>
-      <!-- 300 - 80 ; 105 - 30 = 75 -->
-      <line id="bruestung" x1="105" y1="300" x2="105" y2="220"  style="{{black}}"/>
-      <line id="bruestung_innen" x1="75" y1="300" x2="75" y2="220"  style="{{black}}"/>
-      <line id="bruestung_oben" x1="75" y1="220" x2="105" y2="220"  style="{{black}}"/>
-      <!-- 300 - 190 ; 105 - 38 = 67 -->
-      <line id="katzennetz" x1="105" y1="220" x2="67" y2="110"  style="{{black_thin}}" stroke-linecap="round" stroke-dasharray="1, 3"/>
-
-      <line id="oberlicht" x1="5" y1="39" x2="5" y2="98"  style="{{black}}"/>
-
-
-      <line id="stange" x1="{{points.stange_x}}" y1="0" x2="{{points.stange_x}}" y2="300"  style="{{orange}}"/>
-      <line id="stuetze" x1="{{points.stange_x}}" y1="{{points.stange_y}}"
-                         x2="{{points2.aussen_x}}" y2="{{points2.aussen_y}}"  style="{{orange}}"/>
-      <line id="markise_oben" x1="{{points.stange_x}}" y1="0"
-                         x2="{{points2.aussen_x}}" y2="{{points2.aussen_y}}"  style="{{orange}}"/>
-      <line id="markise_vorne" x1="{{points2.aussen_x}}" y1="{{points2.aussen_y + 20}}"
-                         x2="{{points2.aussen_x}}" y2="{{points2.aussen_y}}"  style="{{orange}}"/>
-
-      <line id="person_lang" x1="20" y1="120" x2="20" y2="300"  style="{{blue}}"/>
-      <line id="person_kurz" x1="40" y1="150" x2="40" y2="300"  style="{{blue}}"/>
-      <!-- 73 122 -->
-      <line id="person_kurz_sitzend_am_tisch" x1="30" y1="178" x2="30" y2="300"  style="{{red}}"/>
-      <line id="person_kurz_sitzend_im_sonnenstuhl" x1="40" y1="227" x2="40" y2="300"  style="{{red}}"/>
-
-      <line id="alter_schirm" x1="30" y1="80" x2="135" y2="128"  style="{{green}}"/>
-
-    </svg>
-    </div>
-
-    <ul>
-      <li>blau links: grosse person steht</li>
-      <li>blau rechts: kleine person steht</li>
-      <li>rot links: kleine person sitzt am tisch</li>
-      <li>rot rechts: kleine person sitzt im sonnenstuhl</li>
-      <li>grün: alter schirm</li>
-      <li>schwarz oben links: oberlicht</li>
-      <li>aussen_x {{points2.aussen_x}}</li>
-      <li>aussen_y {{points2.aussen_y}}</li>
-    </ul>
 
     </div><!-- end container -->
   </body>
